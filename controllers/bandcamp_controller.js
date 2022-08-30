@@ -34,5 +34,23 @@ router.get("/:name", async (req, res) => {
         //res.redirect('/404')
     }
 })
+//
+// CRUD STUFF
+//
+
+router.get('/artists', (req, res) => {
+    res.send('/test/artist works')
+    //res.render('artists.ejs')
+})
+
+router.get('/albums', (req, res) => {
+    res.send('/test/albums works')
+    //res.render('albums.ejs')
+})
+
+router.get('/songs', (req, res) => {
+    res.send('/test/songs works')
+    //res.render('songs.ejs')
+})
 
 module.exports = router;
