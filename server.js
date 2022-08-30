@@ -13,12 +13,13 @@ const PORT = 4000;
 app.set('view engine', 'ejs');
 
 // MIDDLEWARE
+app.use(express.static('public'))
 
 // Router - Models
 
 // Home Route
 app.get('/', (req, res) => {
-    res.send('home route works')
+    res.render('home.ejs')
 })
 
 //Routes - /artists, /albums, /songs
