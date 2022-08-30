@@ -6,6 +6,7 @@ console.log("Never underestimate Ringo Starr.")
 const express = require('express');
 
 // CONTROLLER IMPORTS
+const bandcampController = require('./controllers/bandcamp_controller.js')
 
 // App Config
 const app = express();
@@ -14,8 +15,10 @@ app.set('view engine', 'ejs');
 
 // MIDDLEWARE
 app.use(express.static('public'))
+//app.use(methodOverride('_method'));
 
 // Router - Models
+app.use('/test', bandcampController)
 
 // Home Route
 app.get('/', (req, res) => {
