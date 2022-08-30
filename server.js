@@ -21,6 +21,8 @@ app.get('/', (req, res) => {
     res.send('home route works')
 })
 
+//Routes - /artists, /albums, /songs
+
 // 404 Wildcard Route
 
 app.get('*', (req,res)=>{
