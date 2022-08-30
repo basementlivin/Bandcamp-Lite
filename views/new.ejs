@@ -4,5 +4,30 @@
 <body>
     <%- include('../partials/nav') %>
     <h1>NEW PAGE</h1>
+    <main class="container">
+        <div>
+            <form action="/test" method="POST">
+            <div>
+                <label for="artist-name">Artist Name</label>
+                    <input
+                    type="text"
+                    placeholder="The Budos Band"
+                    name="artist-name"
+                    id="artist-name"
+                />
+            </div>
+            <div>
+                <label for="track-name">Track Name</label>
+                    <input
+                    type="text"
+                    placeholder="Ride Or Die"
+                    name="track-name"
+                    id="track-name" 
+                    />
+            </div>
+            <button class="button is-info">Upload Track</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
