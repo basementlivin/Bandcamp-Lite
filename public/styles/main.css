@@ -1,8 +1,8 @@
 body {
-    background: #1da0c3;
+    background: rgb(255, 255, 255);
     margin: 0 auto;
-    padding-top: 75px;
-    text-align: center;
+    padding-top: 25px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar {
@@ -10,7 +10,7 @@ body {
     position: fixed;
     top: 0;
     height: 45px;
-    background-color: white;
+    background: rgb(255, 255, 255);
     width: 100%;
     left: 0;
 }
@@ -19,9 +19,25 @@ body {
     font-family: "Helvetica";
     font-weight: 200;
     font-size: 1em;
-    color:rgb(26, 24, 24);
+    color:rgb(0, 0, 0);
     display: inline-block;
     text-align: center;
     padding: 14px;
     text-decoration: none;
+}
+
+.home-cluster {
+    margin-bottom: 120px;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.section-title {
+    font-weight:500;
+    font-size: 2.75em;
+    color: #408ea3;
+    text-align: center;
+    margin-bottom: 10px;
 }
