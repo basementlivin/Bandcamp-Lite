@@ -14,3 +14,14 @@ body {
     width: 100%;
     left: 0;
 }
+
+.navbar a {
+    font-family: "Helvetica";
+    font-weight: 200;
+    font-size: 1em;
+    color:rgb(26, 24, 24);
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
