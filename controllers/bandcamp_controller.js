@@ -23,34 +23,31 @@ router.get('/new', (req, res) => {
     })
     //temp
 
-// Show route - http://localhost:XXXX/test/:name
-router.get("/:name", async (req, res) => {
-    try{
-        console.log(req.params.name)
-        res.send(req.params.name)
-        //const found = await db.Song.findBy???(req.params.name)
-    }catch(err){
-        console.log(err)
-        //res.redirect('/404')
-    }
-})
+// Show route - http://localhost:XXXX/test/param/:name
+// router.get("/:name", async (req, res) => {
+//     try{
+//         console.log(req.params.name)
+//         res.send(req.params.name)
+//         //const found = await db.Song.findBy???(req.params.name)
+//     }catch(err){
+//         console.log(err)
+//         //res.redirect('/404')
+//     }
+// })
 //
 // CRUD STUFF
 //
 
 router.get('/artists', (req, res) => {
     res.render('artists.ejs')
-    //res.render('artists.ejs')
 })
 
 router.get('/albums', (req, res) => {
     res.render('albums.ejs')
-    //res.render('albums.ejs')
 })
 
 router.get('/songs', (req, res) => {
     res.render('songs.ejs')
-    //res.render('songs.ejs')
 })
 
 module.exports = router;

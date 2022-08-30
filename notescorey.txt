@@ -1,4 +1,5 @@
 set up routes
 
-/artists, /albums, /upload
+Need to draft schemas for artist/album/song so that info can be passed from submission forms and tracked onto models in the backend
+
 

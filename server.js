@@ -25,6 +25,13 @@ app.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
+// Test redirects
+app.get('/:ext', (req, res) => {
+    let extension = req.params.ext
+    console.log (extension)
+    res.redirect(`/test/${extension}`)
+})
+
 //Routes - /artists, /albums, /songs
 
 // 404 Wildcard Route
