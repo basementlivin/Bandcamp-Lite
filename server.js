@@ -14,12 +14,15 @@ app.set('view engine', 'ejs');
 
 // MIDDLEWARE
 app.use(express.static('public'))
+
 // Router - Models
 
 // Home Route
 app.get('/', (req, res) => {
     res.render('home.ejs')
 })
+
+//Routes - /artists, /albums, /songs
 
 // 404 Wildcard Route
 
