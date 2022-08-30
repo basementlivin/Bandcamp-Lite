@@ -1,0 +1,28 @@
+IMPORTANT LINKS
+
+• GitHub Repo: https://github.com/basementlivin/Bandcamp-Lite
+
+• OG Bandcamp: https://bandcamp.com/
+
+• Figma Wireframes: https://www.figma.com/file/dyVExgJwL9aT5sQG1QsaA5/GA-Project-II%3A-Bandcamp-Lite?node-id=0%3A1
+
+
+
+DESIGN THOUGHTS
+
+• Bandcamp is a strange aesthetic specimen! The user-designed label/artist/album pages feel dated and clunky (we're talkin' early 2000s), while the newer site features under the BANDCAMP DAILY banner ("Album of the Day", "Scene Report", "Lists", etc) are more rooted in the present.
+
+    — BANDCAMP DAILY: WHY U LOOK SO GOOD?
+        1. Typeface: Agipo (2014, RP Digital Foundry), a grotesque sans that's both legible and playful; they take advantages of its various weights and even the outlined version!
+        2. Minimalist embedded music players w/ oversized album art that breaks out of the thin rectangle which contains the player controls and links. I can dig it.
+        3. Full-width images under title and byline add color and movement to an otherwise stark, white website.
+        4. The main content/body copy is sitting comfy in a centered column with not-too-long lines; the negative space on either side is thoughtfully intruded by links to band/label pages and merch items related to the article.
+        5. Responsive!
+
+    — REST OF BANDCAMP: WHY U LOOK SO BLEH?
+        1. Typefaces: Helvetica Neue and Georgia; nice fonts, but commonplace.
+        2. User customizations: while this is a cool feature that should probably stick around (it lends a lot of DIY cred to the platform), the pages could be structured more simply and thoughtfully to increase legibility and accessibility, no matter what the user throws at it.
+        3. The 3-column layout almost always results in oddly-balanced pages. EX: If the album has beefy liner notes, you end up with a long, lonely column of text, which is a chore to scroll through.
+        4. Not responsive!
+
+• A PERSISTENT BUMMER: you can't navigate Bandcamp freely while streaming music! When you leave a page, the music doesn't follow. Come on, man!
