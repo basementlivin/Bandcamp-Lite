@@ -38,6 +38,10 @@ router.get('/new', (req, res) => {
 // CRUD STUFF
 //
 
+router.get('/upload', (req, res) => {
+    res.render('new.ejs')
+})
+
 router.get('/artists', (req, res) => {
     res.render('artists.ejs')
 })

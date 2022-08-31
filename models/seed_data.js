@@ -9,8 +9,8 @@ const testArtist = ({
     active: true,
     albums: [], //*
     songs: [], //*
-    genre: ["Rock", "Electronic", "Experimental"], //*
-    profilePicture: {String}, //URL to cover photo asset
+    genre: ["Rock", "Electronic", "Experimental"], //* push genre from all songs ?
+    profilePicture: "", //URL to cover photo asset
 })
 
 const testAlbum = ({
