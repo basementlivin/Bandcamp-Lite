@@ -2,8 +2,8 @@ console.log("Never underestimate Ringo Starr.")
 //
 
 // npm init -y nodemon, express, mongoose, *axios
-
 const express = require('express');
+require('./config/db.connection')
 
 // CONTROLLER IMPORTS
 const bandcampController = require('./controllers/bandcamp_controller.js')
