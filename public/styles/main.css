@@ -1,8 +1,23 @@
+@font-face {
+    font-family: "Porpora";
+    src: url(https://files.cargocollective.com/c1451007/Porpora-Regular.woff);
+}
+
+@font-face {
+    font-family: "Neue Montreal Medium";
+    src: url(https://files.cargocollective.com/c1451007/PPNeueMontreal-Medium.woff);
+}
+
+@font-face {
+    font-family: "Neue Montreal Medium Italic";
+    src: url(https://files.cargocollective.com/c1451007/PPNeueMontreal-MediumItalic.woff);
+}
+
 body {
     background: rgb(255, 255, 255);
     margin: 0 auto;
     padding-top: 25px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Porpora","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .navbar {
@@ -16,8 +31,7 @@ body {
 }
 
 .navbar a {
-    font-family: "Helvetica";
-    font-weight: 200;
+    font-family: "Porpora","Helvetica Neue",Helvetica,Arial, sans-serif;
     font-size: 1em;
     color:rgb(0, 0, 0);
     display: inline-block;
@@ -35,7 +49,6 @@ body {
 }
 
 .section-title {
-    font-weight:500;
     font-size: 2.75em;
     color: #408ea3;
     text-align: center;
