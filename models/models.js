@@ -18,8 +18,8 @@ const albumSchema = new Schema ({
     /*
     title: {type String, required: true},
     artist: {String} * default to artist of page
-    tracks: [{type: String}] *
-    album-art: {type: String} //URL to cover art asset
+    tracks: [{String}] *
+    albumart: {type: String} //URL to cover art asset
     year: {Number}
     genre: [{String}]
     */
