@@ -19,9 +19,9 @@ mongoose.connection.on('disconnected', () => console.log('MongoDB disconnected  
 ////
 
 const Models = require('./models.js')
-const Artist = Models[0]
-const Album = Models[1]
-const Song = Models[2]
+const Artist = Models.Artist
+const Album = Models.Album
+const Song = Models.Song
 
 //console.log ({Artist: Artist})
 
@@ -140,6 +140,7 @@ async function populateArtist () {
         let accountArtist = await Artist.create({
             name: testArtist.name,
             members: testArtist.members,
+            bio: testArtist.bio,
             yearFormed: testArtist.yearFormed,
             location: testArtist.location,
             active: testArtist.active,

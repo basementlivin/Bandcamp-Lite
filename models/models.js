@@ -42,8 +42,8 @@ const songSchema = new Schema ({
 const Artist = mongoose.model("Artist", artistSchema)
 const Album = mongoose.model("Album", albumSchema)
 const Song = mongoose.model("Song", songSchema)
-module.exports = [
+module.exports = {
     Artist,
     Album,
     Song
-] // return to this lol
+} // return to this lol
