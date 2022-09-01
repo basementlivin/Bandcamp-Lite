@@ -9,8 +9,8 @@ router.use(express.urlencoded({extended: false}))
 // const thing = require('../models/(file)?');
 
 // New route - http://localhost:XXXX/test/new
-router.get('/new', (req, res) => {
-    res.send('/test/new works')
+router.get('/upload', (req, res) => {
+    res.render('new.ejs')
 })
 
 // Create route
@@ -38,9 +38,7 @@ router.get('/new', (req, res) => {
 // CRUD STUFF
 //
 
-router.get('/upload', (req, res) => {
-    res.render('new.ejs')
-})
+
 
 router.get('/artists', (req, res) => {
     res.render('artists.ejs')

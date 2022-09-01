@@ -4,16 +4,11 @@ const { default: test } = require('node:test');
 ////
 ////temp server connection below
 ////
-const connectionStr = 'mongodb+srv://badmeme:RTSmKHjCJn1PyVGI@cluster0.engpp09.mongodb.net/project2'
 
-mongoose.connect(connectionStr);
-mongoose.connection.on('connected', () => {
-  console.log(`[${new Date().toLocaleTimeString()}] - MongoDB connected ... 🙌 🙌 🙌`); 
-});
-mongoose.connection.on('error', (error) => {
-  console.log('MongoDB connection error 😥', error);
-});
-mongoose.connection.on('disconnected', () => console.log('MongoDB disconnected  ⚡️ 🔌 ⚡️'));
+require('../config/db.connection')
+//const connectionStr = 'mongodb+srv://badmeme:RTSmKHjCJn1PyVGI@cluster0.engpp09.mongodb.net/project2'
+
+//
 ////
 ////temp server connection above
 ////
