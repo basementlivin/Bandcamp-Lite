@@ -20,6 +20,47 @@ router.get('/upload', (req, res) => {
     res.render('new.ejs')
 })
 
+router.get('/artist/:ext' async (req, res) => {
+    try {
+        let foundArtist = await Artist.find({name: req.params.ext}) 
+        let context = { artist: foundArtist }
+        console.log(foundArtist)
+        res.render('showartist.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+    
+})
+
+router.get('/album/:ext' async (req, res) => {
+    try {
+        let foundAlbum = await Album.find({title: req.params.ext}) 
+        let context = { album: foundAlbum }
+        console.log(foundAlbum)
+        res.send(context)
+        //res.render('showartist.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+    
+})
+
+router.get('/song/:ext' async (req, res) => {
+    try {
+        let foundSong = await Song.find({title: req.params.ext}) 
+        let context = { song: foundSong }
+        console.log(foundSong)
+        res.send(context)
+        //res.render('showsong.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+    
+})
+
 // Create route
 //router.post for adding new item to db
 
