@@ -88,7 +88,29 @@ router.post('/', async (req, res) => {
     }
 
 })
-//temp
+
+// Stub out router.post('/edit')
+router.post('/edit', async (req, res) => {
+    //const newTest = req.body;
+    console.log("Post test req.body:", req.body);
+    try {
+        let changes = await Model.find({_id: req.body._id})
+        
+        // changes.property1 = req.body.property1 
+        // changes.property2 = req.body.property2 
+        // changes.property3 = req.body.property3 
+        
+        console.log({changes: changes})
+        await Model.findByIdAndUpdate(req.body._id, {changes: changes})
+        
+        
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+})
+// })
+// //
 
 // Show route - http://localhost:XXXX/test/param/:name
 // router.get("/:name", async (req, res) => {
