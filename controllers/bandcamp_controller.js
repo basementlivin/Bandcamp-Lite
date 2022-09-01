@@ -24,10 +24,10 @@ router.get('/artistprofile/:ext', async (req, res) => {
     try {
         let foundArtist = await Artist.find({name: req.params.ext}) 
         //console.log(foundArtist)
-        let context = { artist: foundArtist }
+        let context = { artist: foundArtist[0] }
         //console.log("context", foundArtist)
         res.send(context)
-        //res.render('showartist.ejs', context)
+        res.render('show_artist.ejs', context)
     } catch (err) {
         console.log(err)
         res.redirect('/404')
@@ -39,7 +39,7 @@ router.get('/artistprofile/:ext', async (req, res) => {
 router.get('/album/:ext', async (req, res) => {
     try {
         let foundAlbum = await Album.find({title: req.params.ext}) 
-        let context = { album: foundAlbum }
+        let context = { album: foundAlbum[0] }
         //console.log(foundAlbum)
         // res.send(context)
         res.render('show_album.ejs', context)
@@ -53,7 +53,7 @@ router.get('/album/:ext', async (req, res) => {
 router.get('/song/:ext', async (req, res) => {
     try {
         let foundSong = await Song.find({title: req.params.ext}) 
-        let context = { song: foundSong }
+        let context = { song: foundSong[0] }
         console.log(foundSong)
         res.send(context)
         //res.render('showsong.ejs', context)

@@ -10,7 +10,7 @@ const bandcampController = require('./controllers/bandcamp_controller.js')
 
 // App Config
 const app = express();
-const PORT = 4000;
+const PORT = 4001;
 app.set('view engine', 'ejs');
 
 // MIDDLEWARE
