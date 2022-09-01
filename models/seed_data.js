@@ -89,7 +89,7 @@ const testSongs = ([
         album: "OK Computer"
     },
     {
-        title: "Climbinb Up the Walls",
+        title: "Climbing Up the Walls",
         audio: "", //URL to audio assett in database 
         artist: newArtist._id, //* default to artist of page
         album: "OK Computer"
@@ -179,16 +179,16 @@ async function populateSongs ( accountArtist, accountAlbum ) {
     console.log("created test songs");
 }
 
-async function updateArtist ( inputA, inputB, inputC ) {
+async function updateArtist ( a, b, c ) {
     try {
-        let tempDiscog = inputA.discography
-        console.log("temp test", inputB._id)
-        tempDiscog.albums.push(inputB._id)
-        for (i =0 ; i < inputC.length; i++) {
-            tempDiscog.songs.push(inputC[i]._id)
+        let tempDiscog = a.discography
+        console.log("temp test", b._id)
+        tempDiscog.albums.push(b._id)
+        for (i =0 ; i < c.length; i++) {
+            tempDiscog.songs.push(c[i]._id)
         }
         console.log("final temp discog", tempDiscog)
-        await Artist.findByIdAndUpdate(inputA._id, {discography: tempDiscog})
+        await Artist.findByIdAndUpdate(a._id, {discography: tempDiscog})
     }
     
     catch (err) {
