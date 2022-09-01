@@ -4,5 +4,12 @@
 <body>
     <%- include('../partials/nav') %>
     <h1>Artists, A-Z</h1>
+    <div>
+        <ul>
+            <% for (i=0; i < artists.length; i++) { %>
+                <li> <%= artists[i].name %> </li>
+            <% } %>
+        </ul>
+    </div>
 </body>
 </html>

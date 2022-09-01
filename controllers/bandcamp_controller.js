@@ -6,7 +6,14 @@ router.use(express.json());
 router.use(express.urlencoded({extended: false}))
 
 // Model Import
-// const thing = require('../models/(file)?');
+const Models = require('../models/models.js');
+const Artist = Models.Artist
+const Album = Models.Album
+const Song = Models.Song
+
+// async function createArtist
+// async function createAlbum
+// async function createSong
 
 // New route - http://localhost:XXXX/test/new
 router.get('/upload', (req, res) => {
@@ -16,12 +23,28 @@ router.get('/upload', (req, res) => {
 // Create route
 //router.post for adding new item to db
 
-    //temp
-    router.post('/', async (req, res) => {
-        const newTest = req.body
-        console.log("Post test req.body:" + newTest)    
-    })
-    //temp
+router.post('/', async (req, res) => {
+    //const newTest = req.body;
+    console.log("Post test req.body:", req.body);
+    try {
+        await Artist.create({
+            name: req.body.artistname,
+            //members: [req.body.members]
+        })
+        await Album.create({
+            title: req.body.albumtitle
+        })
+        await Song.create({
+            title: req.body.tracktitle
+        });
+        res.redirect('/')
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+
+})
+//temp
 
 // Show route - http://localhost:XXXX/test/param/:name
 // router.get("/:name", async (req, res) => {
@@ -40,16 +63,40 @@ router.get('/upload', (req, res) => {
 
 
 
-router.get('/artists', (req, res) => {
-    res.render('artists.ejs')
+router.get('/artists', async (req, res) => {
+    try {
+        const allArtists = await Artist.find()
+        const context = { artists: allArtists }
+        console.log(context)
+        res.render('artists.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
 })
 
-router.get('/albums', (req, res) => {
-    res.render('albums.ejs')
+router.get('/albums', async (req, res) => {
+    try {
+        const allAlbums = await Album.find()
+        const context = { albums: allAlbums }
+        console.log(context)
+        res.render('albums.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
 })
 
-router.get('/songs', (req, res) => {
-    res.render('songs.ejs')
+router.get('/songs', async (req, res) => {
+    try {
+        const allSongs = await Songs.find()
+        const context = { songs: allSongs }
+        console.log(context)
+        res.render('songs.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
 })
 
 module.exports = router;
