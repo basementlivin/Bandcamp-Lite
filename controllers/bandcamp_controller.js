@@ -41,8 +41,8 @@ router.get('/album/:ext', async (req, res) => {
         let foundAlbum = await Album.find({title: req.params.ext}) 
         let context = { album: foundAlbum }
         //console.log(foundAlbum)
-        res.send(context)
-        //res.render('showartist.ejs', context)
+        // res.send(context)
+        res.render('show_album.ejs', context)
     } catch (err) {
         console.log(err)
         res.redirect('/404')
