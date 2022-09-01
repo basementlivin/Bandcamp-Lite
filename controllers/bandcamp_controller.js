@@ -20,34 +20,37 @@ router.get('/upload', (req, res) => {
     res.render('new.ejs')
 })
 
-router.get('/artist/:ext' async (req, res) => {
+router.get('/artistprofile/:ext', async (req, res) => {
     try {
         let foundArtist = await Artist.find({name: req.params.ext}) 
+        //console.log(foundArtist)
         let context = { artist: foundArtist }
-        console.log(foundArtist)
-        res.render('showartist.ejs', context)
-    } catch (err) {
-        console.log(err)
-        res.redirect('/404')
-    }
-    
-})
-
-router.get('/album/:ext' async (req, res) => {
-    try {
-        let foundAlbum = await Album.find({title: req.params.ext}) 
-        let context = { album: foundAlbum }
-        console.log(foundAlbum)
+        //console.log("context", foundArtist)
         res.send(context)
         //res.render('showartist.ejs', context)
     } catch (err) {
         console.log(err)
         res.redirect('/404')
     }
-    
+    //right now the find function seems to be working but its returning a featureless object on artists that dont exist in database
+    //:ext seems to be case sensitive, can clean up the code for friendlier use later
 })
 
-router.get('/song/:ext' async (req, res) => {
+router.get('/album/:ext', async (req, res) => {
+    try {
+        let foundAlbum = await Album.find({title: req.params.ext}) 
+        let context = { album: foundAlbum }
+        //console.log(foundAlbum)
+        res.send(context)
+        //res.render('showartist.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+    //:ext seems to be case sensitive, can clean up the code for friendlier use later
+})
+
+router.get('/song/:ext', async (req, res) => {
     try {
         let foundSong = await Song.find({title: req.params.ext}) 
         let context = { song: foundSong }
@@ -58,7 +61,7 @@ router.get('/song/:ext' async (req, res) => {
         console.log(err)
         res.redirect('/404')
     }
-    
+    //:ext seems to be case sensitive, can clean up the code for friendlier use later
 })
 
 // Create route
