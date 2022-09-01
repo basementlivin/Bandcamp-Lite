@@ -1,17 +1,7 @@
 const mongoose = require('mongoose');
 const { default: test } = require('node:test');
 
-////
-////temp server connection below
-////
-
 require('../config/db.connection')
-//const connectionStr = 'mongodb+srv://badmeme:RTSmKHjCJn1PyVGI@cluster0.engpp09.mongodb.net/project2'
-
-//
-////
-////temp server connection above
-////
 
 const Models = require('./models.js')
 const Artist = Models.Artist
