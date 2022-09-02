@@ -118,7 +118,7 @@ router.put('/:ext', async (req, res) => {
     }
 })
 
-router.post('/:ext', async (req, res) => {
+router.delete('/:ext', async (req, res) => {
     try {
         await Album.findByIdAndDelete(req.params.ext);
         res.redirect('/')
