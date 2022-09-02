@@ -4,7 +4,6 @@
 <body>
     <%- include('../partials/nav') %>
     <h1><%= context.title%></h1>
-    <%- include('../partials/foot_edit_album') %>
     <div>
         <ol>
         <% context.tracks.forEach((track) => { %>
@@ -14,6 +13,6 @@
         <% }) %>
         </ol>
     </div>
-    
+    <%- include('../partials/foot_edit_album') %>
 </body>
 </html>
