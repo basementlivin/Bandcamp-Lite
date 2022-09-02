@@ -4,39 +4,63 @@
 }
 
 @font-face {
-    font-family: "Neue Montreal Medium";
-    src: url(https://files.cargocollective.com/c1451007/PPNeueMontreal-Medium.woff);
+    font-family: "Mattone";
+    src: url(https://files.cargocollective.com/c1451007/Mattone-150.woff);
 }
 
 @font-face {
-    font-family: "Neue Montreal Medium Italic";
-    src: url(https://files.cargocollective.com/c1451007/PPNeueMontreal-MediumItalic.woff);
+    font-family: "Halibut";
+    src: url(https://files.cargocollective.com/c1451007/HalibutSerif-Variable.woff2);
 }
 
 body {
-    background: rgb(255, 255, 255);
+    background: #FFF7EA;
     margin: 0 auto;
     padding-top: 25px;
     font-family: "Porpora","Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow-y: scroll;
 }
 
 .navbar {
     overflow: hidden;
     position: fixed;
+    z-index: 1;
     top: 0;
-    height: 45px;
+    height: 80px;
     background: rgb(255, 255, 255);
     width: 100%;
     left: 0;
 }
 
-.navbar a {
+.flex-nav-items {
+    display: grid;
+    grid-template-columns: 55px 20% 40% 20% 55px;
+}
+
+.bandcamp-logo {
+    justify-self: start;
+}
+
+.search-container {
+    justify-self: center;
+}
+
+.search-bar {
+    width: 375px;
+    height: 55px;
+    background: #1DA0C3;
+    mix-blend-mode: normal;
+    border-radius: 30px;
+    font-family: "Porpora";
+    font-size: 1em;
+    text-align: center;
+}
+
+.nav-links {
+    justify-self: end;
     font-family: "Porpora","Helvetica Neue",Helvetica,Arial, sans-serif;
     font-size: 1em;
     color:rgb(0, 0, 0);
-    display: inline-block;
-    text-align: center;
-    padding: 14px;
     text-decoration: none;
 }
 
@@ -51,8 +75,11 @@ body {
 }
 
 .section-title {
+    font-family: "Mattone";
     font-size: 2.75em;
-    color: #408ea3;
-    text-align: center;
+    color: #000000;
+    text-align: left;
+    position: relative;
+    left: 55px;
     margin-bottom: 10px;
 }
