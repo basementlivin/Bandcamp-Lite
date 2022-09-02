@@ -18,6 +18,21 @@ router.get('/upload', (req, res) => {
     res.render('new.ejs')
 })
 
+// Edit routes
+
+// router.get('/artistprofile/:ext/edit', async (req, res) => {
+//     try {
+//         let foundArtist = await Artist.find({name: req.params.ext})
+//         context = { artist : foundArtist[0]}
+//         console.log (context)
+        
+//         res.render('edit.ejs', context)
+//     } catch (err) {
+//         console.log(err)
+//         res.redirect('/404')
+//     }
+// }) 
+
 router.get('/album/:ext/edit', async (req, res) => {
     try {
         let foundAlbum = await Album.find({title: req.params.ext})
@@ -31,6 +46,9 @@ router.get('/album/:ext/edit', async (req, res) => {
     }
 }) 
 
+
+
+// Show routes
 router.get('/artistprofile/:ext', async (req, res) => {
     try {
         let foundArtist = await Artist.find({name: req.params.ext}) 
@@ -100,7 +118,7 @@ router.post('/', async (req, res) => {
 
 })
 
-// Stub out router.post('/edit')
+// EDIT requests
 router.put('/:ext', async (req, res) => {
     try {
         let changes = await Album.findById(req.params.ext)
@@ -108,7 +126,7 @@ router.put('/:ext', async (req, res) => {
         // changes.property2 = req.body.property2 
         // changes.property3 = req.body.property3 
         
-        console.log("Staged:", {changes})
+        //console.log("Staged:", changes)
         await Album.findByIdAndUpdate(req.params.ext, changes)
         res.redirect('/')
         
@@ -118,6 +136,7 @@ router.put('/:ext', async (req, res) => {
     }
 })
 
+// DELETE requests
 router.delete('/:ext', async (req, res) => {
     try {
         await Album.findByIdAndDelete(req.params.ext);
@@ -127,8 +146,6 @@ router.delete('/:ext', async (req, res) => {
         res.redirect('/404')
     }
 })
-// })
-// //
 
 // Show route - http://localhost:XXXX/test/param/:name
 // router.get("/:name", async (req, res) => {
@@ -145,7 +162,7 @@ router.delete('/:ext', async (req, res) => {
 // CRUD STUFF
 //
 
-
+// Search/filter routes
 
 router.get('/artists', async (req, res) => {
     try {

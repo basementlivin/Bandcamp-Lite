@@ -7,6 +7,7 @@ require('./config/db.connection')
 
 // CONTROLLER IMPORTS
 const bandcampController = require('./controllers/bandcamp_controller.js')
+//const searchController = require('./controllers/search_controller.js')
 
 // App Config
 const app = express();
@@ -19,6 +20,7 @@ app.use(methodOverride('_method'));
 
 // Router - Models
 app.use('/test', bandcampController)
+//app.use('/search', searchController)
 
 // Home Route
 app.get('/', (req, res) => {
