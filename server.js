@@ -1,6 +1,6 @@
 console.log("Never underestimate Ringo Starr.")
 //
-
+const methodOverride = require('method-override')
 // npm init -y nodemon, express, mongoose, *axios
 const express = require('express');
 require('./config/db.connection')
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 // MIDDLEWARE
 app.use(express.static('public'))
-//app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 // Router - Models
 app.use('/test', bandcampController)

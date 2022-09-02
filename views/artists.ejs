@@ -7,7 +7,7 @@
     <div>
         <ul>
             <% for (i=0; i < artists.length; i++) { %>
-                <li> <%= artists[i].name %> </li>
+                <li> <a href="./artistprofile/<%= artists[i].name %>"><%= artists[i].name %></a> </li>
             <% } %>
         </ul>
     </div>

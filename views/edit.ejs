@@ -4,5 +4,25 @@
 <body>
     <%- include('../partials/nav') %>
     <h1>EDIT PAGE</h1>
+    <div>
+        <form action="/test/<%= album._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="title">Album Name</label>
+                    <input
+                    type="text"
+                    value="<%= album.title %>"
+                    name="title"
+                    id="title"
+                />
+            </div>
+            <button class="button is-info">Submit Edits</button>
+        </form>
+    </div>
+    <div>
+        <form action="/test/<%= album._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Item">
+        </form>
+    </div>
+
 </body>
 </html>

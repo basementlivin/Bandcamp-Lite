@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+//const methodOverride = require('method-override')
 
 // Middleware
 router.use(express.json());
 router.use(express.urlencoded({extended: false}))
+//router.use(methodOverride('_method'))
 
 // Model Import
 const Models = require('../models/models.js');
@@ -11,14 +13,23 @@ const Artist = Models.Artist
 const Album = Models.Album
 const Song = Models.Song
 
-// async function createArtist
-// async function createAlbum
-// async function createSong
-
 // New route - http://localhost:XXXX/test/new
 router.get('/upload', (req, res) => {
     res.render('new.ejs')
 })
+
+router.get('/album/:ext/edit', async (req, res) => {
+    try {
+        let foundAlbum = await Album.find({title: req.params.ext})
+        context = {album: foundAlbum[0]}
+        console.log (context)
+        
+        res.render('edit.ejs', context)
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+}) 
 
 router.get('/artistprofile/:ext', async (req, res) => {
     try {
@@ -90,20 +101,27 @@ router.post('/', async (req, res) => {
 })
 
 // Stub out router.post('/edit')
-router.post('/edit', async (req, res) => {
-    //const newTest = req.body;
-    console.log("Post test req.body:", req.body);
+router.put('/:ext', async (req, res) => {
     try {
-        let changes = await Model.find({_id: req.body._id})
-        
-        // changes.property1 = req.body.property1 
+        let changes = await Album.findById(req.params.ext)
+        changes.title = req.body.title
         // changes.property2 = req.body.property2 
         // changes.property3 = req.body.property3 
         
-        console.log({changes: changes})
-        await Model.findByIdAndUpdate(req.body._id, {changes: changes})
+        console.log("Staged:", {changes})
+        await Album.findByIdAndUpdate(req.params.ext, changes)
+        res.redirect('/')
         
-        
+    } catch (err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+})
+
+router.post('/:ext', async (req, res) => {
+    try {
+        await Album.findByIdAndDelete(req.params.ext);
+        res.redirect('/')
     } catch (err) {
         console.log(err)
         res.redirect('/404')
