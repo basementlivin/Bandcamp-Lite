@@ -28,11 +28,16 @@ const collection = [
             },
             genre: ["Rock", "Electronic", "Experimental"], //* push genre from all songs ?
             profilePicture: "https://cdn.mos.cms.futurecdn.net/QyuRpsE7sBno5atYkzHK43-1920-80.jpg.webp", //URL to cover photo asset
-        }
+        },
+        { //next artist
+            type: "Artist",
+            name: "Bjork"
+        },
         // { //next artist
         //     type: "Artist",
         //     name: ""
         // },
+        //End of Artists array
         //End of Artists array
     ],      
     [
@@ -48,6 +53,11 @@ const collection = [
         //     type: "Album",
         //     title: ""
         // },
+        ],
+        [{ //first album for next artist
+            type: "Album",
+            title: "Homogenic"
+        },
         ],
         // [{ //first album for next artist
         // // {
@@ -117,12 +127,52 @@ const collection = [
             // },],
 
         ],
-        //[ //artist 2
-        //     [ //album 1
-        //         { //songs
-        //         },
-        //     ], [{}]
-        // ]
+        [ //artist 2
+            [ //album 1
+                { //songs
+                    type: "Song",
+                    title: "Hunter",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Joga",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Unravel",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Bachelorette",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "All Neon Like",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "5 Years",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Immature",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Alarm Call",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "Pluto",
+                    // audio: "", //URL to audio assett in database  
+                },{ 
+                    type: "Song",
+                    title: "All is Full of Love",
+                    // audio: "", //URL to audio assett in database  
+                },
+            ], //[next album{}]
+        ]
+        //[next artist{}]
         //end of songs
     ]  
 ]
