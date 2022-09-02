@@ -29,31 +29,47 @@ body {
     height: 80px;
     background: rgb(255, 255, 255);
     width: 100%;
-    left: 0;
 }
 
 .flex-nav-items {
-    display: grid;
-    grid-template-columns: 55px 20% 40% 20% 55px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
 }
 
 .bandcamp-logo {
-    justify-self: start;
+
 }
 
 .search-container {
-    justify-self: center;
+    position: fixed;
+    justify-content: center;
+
 }
 
 .search-bar {
-    width: 375px;
-    height: 55px;
+    width: 325px;
+    height: 50px;
     background: #1DA0C3;
     mix-blend-mode: normal;
+    border: 2px solid black;
     border-radius: 30px;
     font-family: "Porpora";
     font-size: 1em;
     text-align: center;
+}
+
+/* ::placeholder {
+    color:rgb(255, 255, 255)
+    } HOW CAN I MAKE THIS SPECIFIC TO THE SEARCH BAR??? */ 
+
+.nav-link-cluster {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
 }
 
 .nav-links {

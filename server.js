@@ -42,6 +42,6 @@ app.get('*', (req,res)=>{
 })
 
 // SERVER
-app.listen(PORT, () => console.log(`Starting BandcampLite server at port: ${PORT}`))
+app.listen(process.env.PORT || 4001);
 
 // exports module.exports = app**
