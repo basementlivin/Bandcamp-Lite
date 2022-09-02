@@ -11,128 +11,231 @@ const Song = Models.Song
 //console.log ({Artist: Artist})
 
 let newArtist = {}
-const testArtist = ({
-    name: "Radiohead",
-    members: ["Thom Yorke", 'Jonny Greenwood', 'Colin Greenwood', "Ed O'brien", "Phil Selway"],
-    bio: "i like em",
-    yearFormed: 1985, //** new Date?
-    location: "Abingdon, Oxfordshire", //*
-    active: true,
-    discography: {
-        albums: [], //*
-        songs: [] //*
-    },
-    genre: ["Rock", "Electronic", "Experimental"], //* push genre from all songs ?
-    profilePicture: "https://cdn.mos.cms.futurecdn.net/QyuRpsE7sBno5atYkzHK43-1920-80.jpg.webp", //URL to cover photo asset
-})
 
-const testAlbum = ([
-    {
-    title: "OK Computer",
-    artist: "", // * default to artist of page
-    tracks: [], // *
-    albumart: "https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png", //URL to cover art asset
-    year: 1997,
-    genre: ["Rock", "Experimental"]
-    },
-])
+const collection = [
+    { testArtist : {
+        name: "Radiohead",
+        members: ["Thom Yorke", 'Jonny Greenwood', 'Colin Greenwood', "Ed O'brien", "Phil Selway"],            bio: "i like em",
+        yearFormed: 1985, //** new Date?
+        location: "Abingdon, Oxfordshire", //*
+        active: true,
+        discography: {
+            albums: [], //*
+            songs: [] //
+        },
+        genre: ["Rock", "Electronic", "Experimental"], //* push genre from all songs ?
+        profilePicture: "https://cdn.mos.cms.futurecdn.net/QyuRpsE7sBno5atYkzHK43-1920-80.jpg.webp", //URL to cover photo asset
+    }},
+    { testAlbums : [
+        {            
+            title: "OK Computer",
+            //artist: "", // * default to artist of page
+            tracks: [], // *
+            albumart: "https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png", //URL to cover art asset
+            year: 1997,
+            genre: ["Rock", "Experimental"]
+        },
+        // {
+        //     title: ""
+        //     tracks: [],
+        //     albumart: "",
+        //     year: Number,
+        //     genre: []
+        // },
+    ]},
+    { testSongs : [
+        [{
+            title: "Airbag",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer" //*  
+            //length? //*check out timestamp formatting
+        },{
+            title: "Paranoid Android",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer" //* 
+            //length? //*check out timestamp formatting
+        },{
+            title: "Subterrenean Homesick Alien",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Exit Music (For a Film)",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Let Down",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Karma Police",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Fitter Happier",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Electioneering",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Climbing Up the Walls",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "No Surprises",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "Lucky",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },{
+            title: "The Tourist",
+            audio: "", //URL to audio assett in database 
+            artist: newArtist._id, //* default to artist of page
+            album: "OK Computer"
+        },],
+        // [{
+        //     title: "",
+        //     album:
+        // },],
+    ]}
+]
 
-const testSongs = ([
-    {
-        title: "Airbag",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer" //*  
-        //length? //*check out timestamp formatting
-    },
-    {
-        title: "Paranoid Android",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer" //* 
-        //length? //*check out timestamp formatting
-    },
-    {
-        title: "Subterrenean Homesick Alien",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Exit Music (For a Film)",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Let Down",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Karma Police",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Fitter Happier",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Electioneering",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Climbing Up the Walls",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "No Surprises",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "Lucky",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    },
-    {
-        title: "The Tourist",
-        audio: "", //URL to audio assett in database 
-        artist: newArtist._id, //* default to artist of page
-        album: "OK Computer"
-    }
-])
+// const testArtist = ({
+//     name: "Radiohead",
+//     members: ["Thom Yorke", 'Jonny Greenwood', 'Colin Greenwood', "Ed O'brien", "Phil Selway"],
+//     bio: "i like em",
+//     yearFormed: 1985, //** new Date?
+//     location: "Abingdon, Oxfordshire", //*
+//     active: true,
+//     discography: {
+//         albums: [], //*
+//         songs: [] //*
+//     },
+//     genre: ["Rock", "Electronic", "Experimental"], //* push genre from all songs ?
+//     profilePicture: "https://cdn.mos.cms.futurecdn.net/QyuRpsE7sBno5atYkzHK43-1920-80.jpg.webp", //URL to cover photo asset
+// })
+
+// const testAlbum = ([
+//     {
+//     title: "OK Computer",
+//     artist: "", // * default to artist of page
+//     tracks: [], // *
+//     albumart: "https://upload.wikimedia.org/wikipedia/en/b/ba/Radioheadokcomputer.png", //URL to cover art asset
+//     year: 1997,
+//     genre: ["Rock", "Experimental"]
+//     },
+// ])
+
+// const testSongs = ([
+//     {
+//         title: "Airbag",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer" //*  
+//         //length? //*check out timestamp formatting
+//     },
+//     {
+//         title: "Paranoid Android",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer" //* 
+//         //length? //*check out timestamp formatting
+//     },
+//     {
+//         title: "Subterrenean Homesick Alien",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Exit Music (For a Film)",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Let Down",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Karma Police",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Fitter Happier",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Electioneering",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Climbing Up the Walls",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "No Surprises",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "Lucky",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     },
+//     {
+//         title: "The Tourist",
+//         audio: "", //URL to audio assett in database 
+//         artist: newArtist._id, //* default to artist of page
+//         album: "OK Computer"
+//     }
+// ])
 
 ///---Creating test data---///
 console.log("creating test data");
 
-async function populateArtist () {
+async function populateArtist ( idx ) {
     try {
-        let deleted = await Artist.deleteMany({});
+        await Artist.deleteMany({});
         //console.log(deleted)
         //let reloading = await db.Artist.insertMany();
-        let accountArtist = await Artist.create({
-            name: testArtist.name,
-            members: testArtist.members,
-            bio: testArtist.bio,
-            yearFormed: testArtist.yearFormed,
-            location: testArtist.location,
-            active: testArtist.active,
-            discography: testArtist.disography,
-            genre: testArtist.genre,
-            profilePicture: testArtist.profilePicture
-        });
+        let accountArtist = await Artist.create( collection[idx].testArtist 
+            // name: testArtist.name,
+            // members: testArtist.members,
+            // bio: testArtist.bio,
+            // yearFormed: testArtist.yearFormed,
+            // location: testArtist.location,
+            // active: testArtist.active,
+            // discography: testArtist.disography,
+            // genre: testArtist.genre,
+            // profilePicture: testArtist.profilePicture
+        );
         console.log(accountArtist)
         return accountArtist;
     }
@@ -146,12 +249,12 @@ async function populateAlbums( accountArtist ) {
     try{
         await Album.deleteMany();
         let accountAlbum = await Album.create({
-            title: testAlbum[0].title,
-            artist: accountArtist._id,
-            tracks: [],
-            albumart: testAlbum[0].albumart,
-            year: testAlbum[0].year,
-            genre: []
+            // title: testAlbum[0].title,
+            // artist: accountArtist._id,
+            // tracks: [],
+            // albumart: testAlbum[0].albumart,
+            // year: testAlbum[0].year,
+            // genre: []
         })
         console.log("Album:", accountAlbum)
         return accountAlbum

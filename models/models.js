@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+git 
 const artistSchema = new Schema ({
    
     name: {type: String, required: true},
