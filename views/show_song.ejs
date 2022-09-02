@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+    <h1> <%= context.title %> </h1>
+    <div>
+        Player div?
+        <%= context.audio %>
+    </div>
+    <br>
+    <div>
+        <a href='`/album/${<%= context.album %>}`'> Album name placeholder -- <%= context.album %></a>
+    </div>
+
+</body>
+</html>

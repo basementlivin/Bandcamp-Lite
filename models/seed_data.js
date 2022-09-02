@@ -8,11 +8,7 @@ const Artist = Models.Artist
 const Album = Models.Album
 const Song = Models.Song
 
-//console.log ({Artist: Artist})
-
-let newArtist = {}
 // collection = [[artist a, artist b, artist c],[[albums a],[albums b],[albums c]],[[[tracklists a^]],[[tracklistsb^]], [[tracklistsc^]]]]]
-
 const collection = [
     [
         {
@@ -68,8 +64,8 @@ const collection = [
         //End of Albums array
     ],  
     [
-        //Beginning of Songs array. Each layer groups the songs 
-        // [[[artist1album1songs][artist1album2songs]],[[artist2album1songs][artist2album2songs]]]
+        //Beginning of Songs array.
+        // [[[artist1album1songs][artist1album2songs],...],[[artist2album1songs][artist2album2songs]],...]
         [ //artist 1
             [{ //album1                
                 type: "Song",
@@ -125,7 +121,6 @@ const collection = [
             //title: "",
             // audio: "", //URL to audio assett in database         
             // },],
-
         ],
         [ //artist 2
             [ //album 1
@@ -172,7 +167,7 @@ const collection = [
                 },
             ], //[next album{}]
         ]
-        //[next artist{}]
+        //[next artist catalogue {}]
         //end of songs
     ]  
 ]
