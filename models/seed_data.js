@@ -10,7 +10,7 @@ const Song = Models.Song
 
 // collection = [[artist a, artist b, artist c],[[albums a],[albums b],[albums c]],[[[tracklists a^]],[[tracklistsb^]], [[tracklistsc^]]]]]
 const collection = [
-    [
+    [   
         {
             type: "Artist",
             name: "Radiohead",

@@ -1,4 +1,5 @@
 const express = require('express');
+const { runInNewContext } = require('vm');
 const router = express.Router();
 //const methodOverride = require('method-override')
 
@@ -95,7 +96,8 @@ router.get('/song/:ext', async (req, res) => {
 
 router.post('/', async (req, res) => {
     //const newTest = req.body;
-    console.log("Post test req.body:", req.body);
+    //console.log("Post test req.body:", req.body);
+    console.log("Audio file upload:", req.body.audiofile)
     try {
         await Artist.create({
             name: req.body.artistname,
@@ -105,7 +107,8 @@ router.post('/', async (req, res) => {
             title: req.body.albumtitle
         })
         await Song.create({
-            title: req.body.tracktitle
+            title: req.body.tracktitle,
+            audio: req.body.audiofile
         });
         res.redirect('/')
     } catch (err) {
