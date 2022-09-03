@@ -1,9 +1,12 @@
 console.log(`John Prine rules.`);
 
-const addAnotherTrack = document.getElementById("another-new-track");
-const newTrackField = document.createElement("div");
-newTrackField.setAttribute("class", "another-track-form-field");
+const addTrack = document.getElementById("another-new-track");
+addTrack.addEventListener('click', addAnotherTrackField)
 
-addAnotherTrack.addEventListener('click', (e) => {
-    console.log(`EVENT LISTENING!`)
-})
+function addAnotherTrackField() {
+    console.log(`U DONE GONE & CLICKED IT`)
+    let nextTrack = document.getElementById("another-track-form-field");
+    let newTrackField = document.createElement('div');
+    newTrackField.innerHTML = "<div id='another-track-form-field'><label for='tracktitle'>Track Name</label><input type='text' placeholder='Ride Or Die' name='tracktitle' id='tracktitle'/></div>";
+    nextTrack.appendChild(newTrackField);   
+}
