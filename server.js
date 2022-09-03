@@ -6,7 +6,8 @@ const express = require('express');
 require('./config/db.connection')
 
 // CONTROLLER IMPORTS
-const bandcampController = require('./controllers/bandcamp_controller.js')
+const bandcampController = require('./controllers/bandcamp_controller.js');
+const { Artist, Album } = require('./models/models');
 //const searchController = require('./controllers/search_controller.js')
 
 // App Config
@@ -23,8 +24,18 @@ app.use('/test', bandcampController)
 //app.use('/search', searchController)
 
 // Home Route
-app.get('/', (req, res) => {
-    res.render('home.ejs')
+app.get('/', async (req, res) => {
+    try {
+        
+        let artists = await Artist.find()
+        let albums = await Album.find()
+        let context = [artists, albums]
+        res.render('home.ejs', {context})
+    } catch (err) {
+        console.log(err)
+        res.redirect('*')
+    }
+    
 })
 
 // Test redirects
