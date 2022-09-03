@@ -10,11 +10,18 @@
 
     <div class="home-cluster">
         <h1 class="section-title">Albums</h1>
+        <% for (i=0; i < context[1].length; i++) { %>
+            <div><a href="./test/album/<%= context[1][i].title %>"> <%= context[1][i].title %></a></div>
+        <% } %>
+        
         <img class="hero-image" src="https://f4.bcbits.com/img/0029625296_0" alt="Grey-green background with abstract waveform-shaped windows revealing a technicolor, mountainous, rocky surface.">
     </div>
 
     <div class="home-cluster">
         <h1 class="section-title">Artists</h1>
+        <% for (i=0; i < context[0].length; i++) { %>
+            <div><a href="./artistprofile/<%= context[0][i].name %>"> <%= context[0][i].name %></a></div>
+        <% } %>
         <img class="hero-image" src="https://media.npr.org/assets/img/2017/09/23/gettyimages-815825648_wide-73da66a740c3ddbee9768dcaac9433f6fafa20c6.jpg" alt="Charles Bradley performing on stage in a rust-colored jumpsuit">
     </div>
     <%- include('../partials/foot_main') %>

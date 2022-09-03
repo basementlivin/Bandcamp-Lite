@@ -26,3 +26,10 @@ function addAnotherTrackField() {
         </div>`
     nextTrack.appendChild(newTrackField);   
 }
+
+// function convertAudio () {
+//     let audio = document.getElementbyID("#audiofile");
+//     //change property to the bytestring
+//     //so it can be converted to base64 and then the song post req
+//     //can save it to the database within the song.audio property
+// }
