@@ -2,6 +2,8 @@ const express = require('express');
 const { runInNewContext } = require('vm');
 const router = express.Router();
 //const methodOverride = require('method-override')
+const formidable = require('formidable')
+const fs = require('fs')
 
 // Middleware
 router.use(express.json());
@@ -97,20 +99,33 @@ router.get('/song/:ext', async (req, res) => {
 router.post('/', async (req, res) => {
     //const newTest = req.body;
     //console.log("Post test req.body:", req.body);
-    console.log("Audio file upload:", req.body.audiofile)
+    //console.log("req:", req)
+    
     try {
-        await Artist.create({
-            name: req.body.artistname,
-            //members: [req.body.members]
+        //convert req.body.audiofile to base64 byte string
+        new formidable.IncomingForm().parse(req, async (err, fields, files) => {
+            console.log("Fields", fields)
+            console.log("Files", files)
+            
+            await Artist.create({
+                name: fields.artistname,
+                //members: [req.body.members]
+            })
+            await Album.create({
+                title: fields.albumtitle
+            })
+
+            fs.readFile(files.audiofile.filepath, async (err, data) => {
+                await Song.create({
+                    title: fields.tracktitle,
+                    audio: data.toString('base64')
+                });
+            })
+            
+            res.redirect('/')
+            
         })
-        await Album.create({
-            title: req.body.albumtitle
-        })
-        await Song.create({
-            title: req.body.tracktitle,
-            audio: req.body.audiofile
-        });
-        res.redirect('/')
+        
     } catch (err) {
         console.log(err)
         res.redirect('/404')
