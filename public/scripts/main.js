@@ -1,31 +1,46 @@
 console.log(`John Prine rules.`);
 
+
+// CLICK TO ADD NEW TRACK FIELD: THE DRY VERSION 🌵
+
 const addTrack = document.getElementById("another-new-track");
 addTrack.addEventListener('click', addAnotherTrackField)
 
 function addAnotherTrackField() {
-    console.log(`U DONE GONE & CLICKED IT`)
-    let nextTrack = document.getElementById("another-track-form-field");
-    let newTrackField = document.createElement('div');
-    newTrackField.innerHTML =
-        `<div class="upload-form-field" id="another-track-form-field">
-            <label for="tracktitle">Track Name</label>
-                <input class="user-input-field"
-                type="text"
-                placeholder="Ride Or Die"
-                name="tracktitle"
-                id="tracktitle" 
-                />
-            <label for="audiofile">Audio File</label>
-                <input
-                type="file"
-                accept="audio/*"
-                name="audiofile"
-                id="audiofile"
-                />
-        </div>`
+    console.log(`U CLICKED THE RIGHT THING.`);
+    const nextTrack = document.getElementById("another-track-form-field");
+    const newTrackField = nextTrack.cloneNode(true);
+    newTrackField.id = "additional-track";
     nextTrack.appendChild(newTrackField);
 }
+
+// CLICK TO ADD NEW TRACK FIELD: THE SOPPING WET VERSION 💦
+
+// function addAnotherTrackField() {
+//     console.log(`U DONE GONE & CLICKED IT`)
+//     let nextTrack = document.getElementById("another-track-form-field");
+//     let newTrackField = document.createElement('div');
+//     newTrackField.innerHTML =
+//         `<div class="upload-form-field" id="another-track-form-field">
+//             <label for="tracktitle">Track Name</label>
+//                 <input class="user-input-field"
+//                 type="text"
+//                 placeholder="Ride Or Die"
+//                 name="tracktitle"
+//                 id="tracktitle" 
+//                 />
+//             <label for="audiofile">Audio File</label>
+//                 <input
+//                 type="file"
+//                 accept="audio/*"
+//                 name="audiofile"
+//                 id="audiofile"
+//                 />
+//         </div>`
+//     nextTrack.appendChild(newTrackField);
+// }
+
+
 
 // function convertAudio () {
 //     let audio = document.getElementbyID("#audiofile");
