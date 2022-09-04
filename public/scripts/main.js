@@ -10,7 +10,7 @@ function addAnotherTrackField() {
     newTrackField.innerHTML =
         `<div class="upload-form-field" id="another-track-form-field">
             <label for="tracktitle">Track Name</label>
-                <input
+                <input class="user-input-field"
                 type="text"
                 placeholder="Ride Or Die"
                 name="tracktitle"
@@ -24,7 +24,7 @@ function addAnotherTrackField() {
                 id="audiofile"
                 />
         </div>`
-    nextTrack.appendChild(newTrackField);   
+    nextTrack.appendChild(newTrackField);
 }
 
 // function convertAudio () {
