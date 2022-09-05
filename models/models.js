@@ -34,7 +34,8 @@ const albumSchema = new Schema ({
 const songSchema = new Schema ({
     type: {type: String, required: true, default: 'Song'},
     title: {type: String, required: true},
-    audio: {type: String, default: null}, //URL to audio assett in database 
+    audio: {type: String, default: null}, //base64 encoded audio string.
+    //audiosrcname: {type: String, default: null} //stores original filename and ext of source audio file.
     artist: {type: mongoose.Types.ObjectId, ref: 'Artist', default: null}, //* default to artist of page
     album: {type: String, default: null}, //*  may need different default
     genre: [{type: String, default: null}],
