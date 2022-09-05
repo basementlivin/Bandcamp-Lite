@@ -15,8 +15,7 @@
                         <img class="album-art">
                     </div>
         <% for (i=0; i < context[1].length; i++) { %>
-            <div class="album-name"><a href="./test/album/<%= context[1][i].title %>"> <%= context[1][i].title %></a></div>
-            <div class="artist-name"><a href="./test/album/<%= context[1][i].artist %>"> <%= context[1][i].artist %></a></div>
+            <div><a href="./test/album/<%= context[1][i].title %>"> <%= context[1][i].title %></a></div>
         <% } %>
     </div>
     </div>  
@@ -24,7 +23,7 @@
     <div class="home-cluster">
         <h1 class="section-title">Artists</h1>
         <% for (i=0; i < context[0].length; i++) { %>
-            <div><a href="./artistprofile/<%= context[0][i].name %>"> <%= context[0][i].name %></a></div>
+            <div><a href="./artistprofile/<%= context[0][i]._id %>"> <%= context[0][i].name %></a></div>
         <% } %>
     </div>
     <%- include('../partials/foot_main') %>

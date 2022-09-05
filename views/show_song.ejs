@@ -5,11 +5,12 @@
     <%- include('../partials/nav') %>
     <h1> <%= context.title %> </h1>
     <div>
-        Player div?
+
+        <audio controls>
+            <source src="data:audio/mpeg;base64,<%=context.audio%>"/>
+            <!-- src typically accepts a dataURL as its source and the current version of the site is not sending data that way, so I handwrote the first part of the dataURL formatting and injected the base64 encoded audio string with injector tags -->
+        </audio>
         
-        <button onclick="playSound()" disabled>Play</button>
-        <button onclick="stopSound()" disabled>Stop</button>
-        <%= context.audio %>
     </div>
     <br>
     <div>

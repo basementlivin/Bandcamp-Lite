@@ -83,6 +83,8 @@ router.get('/album/:ext', async (req, res) => {
 })
 
 router.get('/song/:ext', async (req, res) => {
+    
+    fs.writeFile
     try {
         let context = await Song.findById(req.params.ext) 
         res.render('show_song.ejs', {context})
