@@ -54,12 +54,13 @@ router.get('/album/:ext/edit', async (req, res) => {
 // Show routes
 router.get('/artistprofile/:ext', async (req, res) => {
     try {
-        let foundArtist = await Artist.find({name: req.params.ext}) 
-        //console.log(foundArtist)
-        let context = { artist: foundArtist[0] }
+        let foundArtist = await Artist.findById(req.params.ext) 
+        console.log(foundArtist)
+        //let context = { artist: foundArtist[0] }
+        let context = foundArtist
         //console.log("context", foundArtist)
         res.send(context)
-        res.render('show_artist.ejs', context)
+        res.render('show_artist.ejs', {context})
     } catch (err) {
         console.log(err)
         res.redirect('/404')

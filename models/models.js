@@ -14,7 +14,7 @@ const artistSchema = new Schema ({
         albums: [{type: mongoose.Types.ObjectId, ref: 'Album', default: null},],
         songs: [{type: mongoose.Types.ObjectId, ref: 'Song', default: null},], 
     },
-    genre: [{type: String, default: null}],//[{type: mongoose.Schema.Types.ObjectID()***}], //*
+    genre: [{type: String, default: null}], //[{type: mongoose.Schema.Types.ObjectID()***}], //*
     media: [{type: String, default: null}], // array of URLs to assetts, album art, merch photos, etc, that the artist wants to display on page
     profilePicture: {type: String, default: null}, //URL to cover photo asset, can ref media array probably
     //* place for media uploads? array of images? 
