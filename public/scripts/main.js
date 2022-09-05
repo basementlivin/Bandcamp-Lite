@@ -10,15 +10,16 @@ function addAnotherTrackField() {
     const nextTrack = document.getElementById("another-track-form-field");
     const newTrackField = nextTrack.cloneNode(true);
     console.log(newTrackField.children);
-    for (let i = 0; i < newTrackField.children.length; i++) {
-        if (i < 5) {
-        i++;
-        }
-        else {
-            break;
-        }
-    }
-    nextTrack.append(newTrackField);
+
+    let newFormArray = Array.from(newTrackField.children);
+    console.log(newFormArray);
+
+    let trackClones = newFormArray.slice(0,4)
+    console.log(trackClones);
+
+    // let trackClones = newTrackField.children;
+    // addAnotherTrack = Array.prototype.trackClones.slice (0, 4);
+    // nextTrack.append(addAnotherTrack);
 }
 
 // CLICK TO ADD NEW TRACK FIELD: THE SOPPING WET VERSION 💦
