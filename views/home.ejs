@@ -13,6 +13,8 @@
                 <div class="album-card">
                     <div class="album-art-frame">
                         <img class="album-art">
+                        <!-- NOTE: this album art image is linked in the CSS for now; should be updated to reflect the URL string in the database -->
+                        <!-- NOTE: when I duplicated the .title injector code and changed it to .artist, it displayed the  ObjectId instead of the artist name -->
                     </div>
         <% for (i=0; i < context[1].length; i++) { %>
             <div><a href="./test/album/<%= context[1][i].title %>"> <%= context[1][i].title %></a></div>
