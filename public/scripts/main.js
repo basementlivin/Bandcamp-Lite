@@ -7,11 +7,18 @@ const addTrack = document.getElementById("another-new-track");
 addTrack.addEventListener('click', addAnotherTrackField)
 
 function addAnotherTrackField() {
-    console.log(`U CLICKED THE RIGHT THING.`);
     const nextTrack = document.getElementById("another-track-form-field");
     const newTrackField = nextTrack.cloneNode(true);
-    newTrackField.id = "additional-track";
-    nextTrack.appendChild(newTrackField);
+    console.log(newTrackField.children);
+    for (let i = 0; i < newTrackField.children.length; i++) {
+        if (i < 5) {
+        i++;
+        }
+        else {
+            break;
+        }
+    }
+    nextTrack.append(newTrackField);
 }
 
 // CLICK TO ADD NEW TRACK FIELD: THE SOPPING WET VERSION 💦
