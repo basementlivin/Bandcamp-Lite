@@ -158,7 +158,6 @@ form {
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    border: 2px solid red;
 }
 
 label {
@@ -185,8 +184,6 @@ input.user-input-field {
 
 #another-track-form-field {
     box-sizing: border-box;
-
-    border: 2px solid green;
 }
 
 #audiofile {

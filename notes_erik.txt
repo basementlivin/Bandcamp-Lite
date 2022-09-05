@@ -6,6 +6,19 @@ IMPORTANT LINKS
 
 • Figma Wireframes: https://www.figma.com/file/dyVExgJwL9aT5sQG1QsaA5/GA-Project-II%3A-Bandcamp-Lite?node-id=0%3A1
 
+JAVASCRIPT METHODS & LOOPS
+
+• I learned about a bunch of new (to me) methods while trying to create our dynamic upload form for creating new albums. Here's a few that I spent some quality time with:
+    – cloneNode
+    – .children (returns HTMLCollection)
+    — .childNodes (returns Nodes)
+    – Array.from(const.children) —> then performing a .slice on the new array!
+    – insertAdjacentHTML (position, text)
+    – insertAdjacentElement (position, element)
+
+• I also read the documentation for the loops below, but couldn't figure out how to apply them to this situation. I stumbled across them while trying to find ways to iterate through an array of objects or an HTMLCollection:
+    • for...of
+    • for...in
 
 
 DESIGN THOUGHTS

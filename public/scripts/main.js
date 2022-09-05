@@ -9,45 +9,11 @@ addTrack.addEventListener('click', addAnotherTrackField)
 function addAnotherTrackField() {
     const nextTrack = document.getElementById("another-track-form-field");
     const newTrackField = nextTrack.cloneNode(true);
-    console.log(newTrackField.children);
-
-    let newFormArray = Array.from(newTrackField.children);
-    console.log(newFormArray);
-
-    let trackClones = newFormArray.slice(0,4)
-    console.log(trackClones);
-
-    // let trackClones = newTrackField.children;
-    // addAnotherTrack = Array.prototype.trackClones.slice (0, 4);
-    // nextTrack.append(addAnotherTrack);
+    nextTrack.id = "dynamically-added-track";
+    nextTrack.insertAdjacentElement("afterend", newTrackField);
 }
 
-// CLICK TO ADD NEW TRACK FIELD: THE SOPPING WET VERSION 💦
-
-// function addAnotherTrackField() {
-//     console.log(`U DONE GONE & CLICKED IT`)
-//     let nextTrack = document.getElementById("another-track-form-field");
-//     let newTrackField = document.createElement('div');
-//     newTrackField.innerHTML =
-//         `<div class="upload-form-field" id="another-track-form-field">
-//             <label for="tracktitle">Track Name</label>
-//                 <input class="user-input-field"
-//                 type="text"
-//                 placeholder="Ride Or Die"
-//                 name="tracktitle"
-//                 id="tracktitle" 
-//                 />
-//             <label for="audiofile">Audio File</label>
-//                 <input
-//                 type="file"
-//                 accept="audio/*"
-//                 name="audiofile"
-//                 id="audiofile"
-//                 />
-//         </div>`
-//     nextTrack.appendChild(newTrackField);
-// }
-
+// GIVE THIS FUNCTION SOME LOTION, MAN!
 
 
 // function convertAudio () {
