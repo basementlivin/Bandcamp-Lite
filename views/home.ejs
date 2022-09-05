@@ -9,15 +9,22 @@
 
     <div class="home-cluster">
         <h1 class="section-title">Albums</h1>
-            <div class="album-card-wrapper">
+        <% for (i=0; i < context[1].length; i++) { %>
+        <div class="album-card-wrapper">
                 <div class="album-card">
                     <div class="album-art-frame">
-                        <img class="album-art">
-                        <!-- NOTE: this album art image is linked in the CSS for now; should be updated to reflect the URL string in the database -->
-                        <!-- NOTE: when I duplicated the .title injector code and changed it to .artist, it displayed the  ObjectId instead of the artist name -->
+                        <img src="<%=context[1][i].albumart%>" class="album-art">
+                        <!-- context template: context[1][i].propertyname -->
+
+                        <!-- resolved the broken image stuff. Now it renders to the page. The reason 
+                        some of it didnt work before is that albums have titles but artists have names, 
+                        and they are indexed in the context differently. yada yada, feel free to ask me
+                        if you run into more issues. 
+
+                        I left a sample for how to access the content for the title card above -->
                     </div>
-        <% for (i=0; i < context[1].length; i++) { %>
-            <div><a href="./test/album/<%= context[1][i].title %>"> <%= context[1][i].title %></a></div>
+            <div><a href="./test/album/<%= context[1][i]._id %>"> <%= context[1][i].title %></a></div>
+        </div>
         <% } %>
     </div>
     </div>  
@@ -25,6 +32,14 @@
     <div class="home-cluster">
         <h1 class="section-title">Artists</h1>
         <% for (i=0; i < context[0].length; i++) { %>
+            <div class="artist-card-wrapper">
+                <div class="artist-art-frame">
+                    <img src="<%=context[0][i].profilePicture%>" class="artist-art">
+                    <!-- context template: context[0][i].propertyname -->
+
+                    <!-- took a few educated guesses at how you were gonna assign classes here, but didnt do anything with them so feel free to edit -->
+                </div>
+            </div>
             <div><a href="./artistprofile/<%= context[0][i]._id %>"> <%= context[0][i].name %></a></div>
         <% } %>
     </div>

@@ -26,7 +26,6 @@ app.use('/test', bandcampController)
 // Home Route
 app.get('/', async (req, res) => {
     try {
-        
         let artists = await Artist.find()
         let albums = await Album.find()
         let context = [artists, albums]

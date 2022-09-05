@@ -95,13 +95,13 @@ console.log(decode)
 
 /////shit from the show page
 
-// <!-- <% let binary = atob(context.audio) %> -->
-//         <!-- <% console.log(binary) %> -->
-//         <!-- <% let buffer = new ArrayBuffer(binary.length) %> -->
-//         <!-- <% console.log(buffer) %> -->
-//         <!-- <% let bytes = new Uint8Array(buffer) %> -->
-//         <!-- <% for (i = 0; i < buffer.byteLength; i++) { %> -->
-//         <!-- <% bytes[i] = binary.charCodeAt(i) & 0xFF; %> -->
-//         <!-- <% } %> -->
-//         <!-- <% console.log("new buffer", buffer)%> -->
-//         <!-- <% initAudioBuffer() %> -->
+//         <% let binary = atob(context.audio) %>
+//         <% console.log(binary) %> 
+//         <% let buffer = new ArrayBuffer(binary.length) %> 
+//         <% console.log(buffer) %> 
+//         <% let bytes = new Uint8Array(buffer) %>
+//         <% for (i = 0; i < buffer.byteLength; i++) { %>
+//         <% bytes[i] = binary.charCodeAt(i) & 0xFF; %>
+//         <% } %>
+//         <% console.log("new buffer", buffer)%>
+//         <% initAudioBuffer() %>
