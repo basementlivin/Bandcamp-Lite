@@ -548,7 +548,6 @@ async function reseedDatabase (collection) {
         artist = await createArtist(collection[0][x]); 
         for (j = 0; j < collection[1][x].length; j++) {
             let album = await createAlbum(collection[1][x][j], artist._id)
-            //collection[2][x][j].audio = "dfsafd"
             let songs = await createSongs(collection[2][x][j], artist._id, album._id)
             await updateArtist (artist, album, songs)
             await updateAlbum (album, songs)
