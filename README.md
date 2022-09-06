@@ -37,7 +37,19 @@ Artists may link to their label's website for longer bios or related articles. A
 ## UPLOAD & EDIT
 These pages present users with simple forms for entering all relevent information for their artist pages and latest releases.
 We've implemented JavaScript DOM manipulation to make the "New Track" fields dynamic: the form loads up with one input field for a track, plus a file upload button.
-Users can click the "add another track" button to create as many track fields as they need for a given album.
+Users can click the "add another track" button to create as many track fields as they need for a given album. This feature was accomplished with the following code block:
+
+```javascript
+const addTrack = document.getElementById("another-new-track");
+addTrack.addEventListener('click', addAnotherTrackField)
+
+function addAnotherTrackField() {
+    const nextTrack = document.getElementById("another-track-form-field");
+    const newTrackField = nextTrack.cloneNode(true);
+    nextTrack.id = "dynamically-added-track";
+    nextTrack.insertAdjacentElement("afterend", newTrackField);
+}
+```
 
 <img width="1313" alt="Screen Shot 2022-09-05 at 4 55 07 PM" src="https://user-images.githubusercontent.com/109049703/188512129-e25155ca-33d5-4951-8549-f7f072a5be4f.png">
 
