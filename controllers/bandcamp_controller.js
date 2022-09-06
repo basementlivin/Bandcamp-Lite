@@ -73,7 +73,7 @@ router.get('/album/:ext', async (req, res) => {
     try {
         let context = await Album.findById(req.params.ext).populate({path: 'tracks'}) 
         
-        console.log("populate test:", context.tracks)
+        //console.log("populate test:", context.tracks)
         
         //console.log(foundAlbum)
         // res.send(context)

@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
         let context = [artists, albums]
         res.render('home.ejs', {context})
     } catch (err) {
-        console.log(err)
+        console.log("Home page error", err)
         res.redirect('*')
     }
     
