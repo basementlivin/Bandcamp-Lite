@@ -3,32 +3,52 @@
     <%- include("../partials/head")  %>
 <body>
     <%- include('../partials/nav') %>
-    <h1> <%= context.name %> </h1>
+    <h1> <%= context[0].name %> </h1>
+
     <div>
-        Band Info
-        
+        Band Info:
+        <!-- <%= context %> -->
         <div>
-            Members list Genre?
+            Profile Picture
+            <img src="<%context[0].profilePicture%>">       
         </div>
         <div>
-            Profile photo        
-        </div>
+            <h5>Band Info</h5>
+            Members: <%= context[0].members %>
+            Year: <%= context[0].yearFormed %>
+            Location: <%= context[0].location %>
+
+        </div>        
         <div>
-            Bio:
+            <!-- Bio: <%= context.bio %> -->
         </div>
     </div>
     <div>
         Albums
         <div>
-            Featured Album
+            Featured Album Player
             <div>
-                album player
+                <div>
+                    <h2><%= context[1].title%></h2>
+                    <ol>
+                    <% context[1].tracks.forEach((track) => { %>
+                        <li>
+                            <audio controls>
+                                <source src="data:audio/mpeg;base64,<%=track.audio%>"/>
+                                <!-- src typically accepts a dataURL as its source and the current version of the site is not sending data that way, so I handwrote the first part of the dataURL formatting and injected the base64 encoded audio string with injector tags -->
+                            </audio>
+                        <%= track.title %>
+                        </li>
+                    <% }) %>
+                    </ol>
+                    
+                </div>
             </div>
         </div>
         <div>
             Discography links
             <div>
-                
+                links to tracks, songs
             </div>
         </div>       
     </div>
