@@ -501,7 +501,7 @@ async function createSongs (seedArray, val, val2) {
         seedArray.forEach(seed => {
             seed.artist = val
             seed.album = val2
-            //seed.audio = "put base64 encoded string here to test sample audio"
+            //set seed audio sample audio here with seed.audio = "base64string"
         })
         createdSongs = await Song.insertMany(seedArray); 
         return createdSongs       
@@ -563,4 +563,4 @@ async function reseedDatabase (collection) {
     mongoose.connection.close();
 }
 
-reseedDatabase(collection)
+//reseedDatabase(collection)
