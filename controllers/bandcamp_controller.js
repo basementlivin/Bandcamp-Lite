@@ -55,11 +55,11 @@ router.get('/album/:ext/edit', async (req, res) => {
 router.get('/artistprofile/:ext', async (req, res) => {
     try {
         let foundArtist = await Artist.findById(req.params.ext) 
-        console.log(foundArtist)
+        
         //let context = { artist: foundArtist[0] }
         let context = foundArtist
         //console.log("context", foundArtist)
-        res.send(context)
+        //res.send(context)
         res.render('show_artist.ejs', {context})
     } catch (err) {
         console.log(err)
@@ -71,7 +71,9 @@ router.get('/artistprofile/:ext', async (req, res) => {
 
 router.get('/album/:ext', async (req, res) => {
     try {
-        let context = await Album.findById(req.params.ext) 
+        let context = await Album.findById(req.params.ext).populate({path: 'tracks'}) 
+        
+        console.log("populate test:", context.tracks)
         
         //console.log(foundAlbum)
         // res.send(context)
