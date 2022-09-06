@@ -21,17 +21,18 @@
     </div>
     <div class="home-cluster">
         <h1 class="section-title">Artists</h1>
-        <% for (i=0; i < context[0].length; i++) { %>
-            <div class="artist-card-wrapper">
+        <div class="artist-card-wrapper">
+            <% for (i=0; i < context[0].length; i++) { %>
                 <div class="artist-card">
                     <div class="artist-photo-frame">
                         <img src="<%=context[0][i].profilePicture%>" class="artist-photo">
                     </div>
-                </div>
-            <a class="artist-name" href="./test/artistprofile/<%= context[0][i]._id %>"> <%= context[0][i].name %></a>
+                
+            <a class="artist-name" href="./test/artistprofile/<%= context[0][i]._id %>"> <%= context[0][i].name %></a></div>
         <% } %>
         </div>
     </div>
+    
     <%- include('../partials/foot_main') %>
 </body>
 </html>
