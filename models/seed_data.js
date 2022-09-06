@@ -14,7 +14,8 @@ const collection = [
         {
             type: "Artist",
             name: "Radiohead",
-            members: ["Thom Yorke", 'Jonny Greenwood', 'Colin Greenwood', "Ed O'brien", "Phil Selway"],            bio: "i like em",
+            members: ["Thom Yorke", 'Jonny Greenwood', 'Colin Greenwood', "Ed O'brien", "Phil Selway"],            
+            bio: "i like em",
             yearFormed: 1985, //** new Date?
             location: "Abingdon, Oxfordshire", //*
             active: true,
@@ -29,11 +30,30 @@ const collection = [
             type: "Artist",
             name: "Bjork"
         },
+        { //next artist
+            type: "Artist",
+            name: "Modest Mouse"
+        },
+        { //next artist
+            type: "Artist",
+            name: "My Bloody Valentine"
+        },
+        { //next artist
+            type: "Artist",
+            name: "Cocteau Twins"
+        },
+        { //next artist
+            type: "Artist",
+            name: "Aphex Twin"
+        },
+        { //next artist
+            type: "Artist",
+            name: "Sufjan Stevens"
+        },
         // { //next artist
         //     type: "Artist",
         //     name: ""
         // },
-        //End of Artists array
         //End of Artists array
     ],      
     [
@@ -50,124 +70,397 @@ const collection = [
         //     title: ""
         // },
         ],
-        [{ //first album for next artist
+        [{ //first album for next artist - Bjork
             type: "Album",
-            title: "Homogenic"
+            title: "Homogenic",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/a/af/Bj%C3%B6rk_-_Homogenic.png",
+            year: 1997,
+            genre: ["Electronica", "Trip Hop", "Glitch","Art Pop", "Experimental",]
         },
         ],
-        // [{ //first album for next artist
-        // // {
-        // //     type: "Album",
-        // //     title: ""
-        // // },
-        // }],
+        [{ //first album for next artist - Modest Mouse  
+            type: "Album",
+            title: "The Moon & Antarctica",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/0/00/TheMoonAntarctica.jpg"
+        },
+        // {  //next album for this artist
+        //     type: "Album",
+        //     title: ""
+        // }
+        ],
+        [{ //first album for next artist  - My Bloody Valentine   
+            type: "Album",
+            title: "Loveless",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/4/4b/My_Bloody_Valentine_-_Loveless.png"
+        // },
+        // {  //next album for this artist
+        //     type: "Album",
+        //     title: ""
+        }],
+        [{ //first album for next artist  - Cocteau Twins   
+            type: "Album",
+            title: "Heaven or Las Vegas",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/6/60/Cocteau_Twins%E2%80%94Heaven_or_Las_Vegas.jpg"
+        // },
+        // {  //next album for this artist
+        //     type: "Album",
+        //     title: ""
+        }],
+        [{ //first album for next artist  - Aphex Twin   
+            type: "Album",
+            title: "druQks",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/f/f0/Drukqs_%28Front_Cover%29.png"
+        // },
+        // {  //next album for this artist
+        //     type: "Album",
+        //     title: ""
+        }],
+        [{ //first album for next artist  - Sufjan Stevens   
+            type: "Album",
+            title: "Age of Adz",
+            albumart: "https://upload.wikimedia.org/wikipedia/en/e/e9/Sufjanstevensageofadz.jpg"
+        // },
+        // {  //next album for this artist
+        //     type: "Album",
+        //     title: ""
+        }],
         //End of Albums array
     ],  
     [
         //Beginning of Songs array.
         // [[[artist1album1songs][artist1album2songs],...],[[artist2album1songs][artist2album2songs]],...]
-        [ //artist 1
-            [{ //album1                
-                type: "Song",
-                title: "Airbag",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Paranoid Android",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Subterrenean Homesick Alien",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Exit Music (For a Film)",
-                //audio: "", //URL to audio assett in database                    
-            },{
-                type: "Song",
-                title: "Let Down",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Karma Police",
-                //audio: "", //URL to audio assett in database
-            },{
-                type: "Song",
-                title: "Fitter Happier",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Electioneering",
-                //audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Climbing Up the Walls",
-                // audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "No Surprises",
-                // audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "Lucky",
-                // audio: "", //URL to audio assett in database 
-            },{
-                type: "Song",
-                title: "The Tourist",
-                // audio: "", //URL to audio assett in database 
-            }],
+        [ //artist 1 - Radiohead
+            [
+                { //album1                
+                    type: "Song",
+                    title: "Airbag",
+                },{
+                    type: "Song",
+                    title: "Paranoid Android",
+                },{
+                    type: "Song",
+                    title: "Subterrenean Homesick Alien",
+                },{
+                    type: "Song",
+                    title: "Exit Music (For a Film)",
+                },{
+                    type: "Song",
+                    title: "Let Down",
+                },{
+                    type: "Song",
+                    title: "Karma Police",
+                },{
+                    type: "Song",
+                    title: "Fitter Happier",
+                },{
+                    type: "Song",
+                    title: "Electioneering",
+                },{
+                    type: "Song",
+                    title: "Climbing Up the Walls",
+                },{
+                    type: "Song",
+                    title: "No Surprises",
+                },{
+                    type: "Song",
+                    title: "Lucky",
+                },{
+                    type: "Song",
+                    title: "The Tourist",
+                }],
             // [{ //album 2
             //type: "Song",
             //title: "",
-            // audio: "", //URL to audio assett in database         
+                     
             // },],
         ],
-        [ //artist 2
+        [ //artist 2 - Bjork
             [ //album 1
                 { //songs
                     type: "Song",
                     title: "Hunter",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Joga",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Unravel",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Bachelorette",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "All Neon Like",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "5 Years",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Immature",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Alarm Call",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "Pluto",
-                    // audio: "", //URL to audio assett in database  
                 },{ 
                     type: "Song",
                     title: "All is Full of Love",
-                    // audio: "", //URL to audio assett in database  
                 },
             ], //[next album{}]
-        ]
-        //[next artist catalogue {}]
+        ],
+        [//next artist - Modest Mouse
+            [//album 1
+                { 
+                    type: "Song",
+                    title: "3rd Planet"
+                },{
+                    type: "Song",
+                    title: "Gravity Rides Everything"
+                },{
+                    type: "Song",
+                    title: "Dark Center of the Universe"
+                },{
+                    type: "Song",
+                    title: "Perfect Disguise"
+                },{
+                    type: "Song",
+                    title: "Tiny Cities Made of Ashes"
+                },{
+                    type: "Song",
+                    title: "A Different City"
+                },{
+                    type: "Song",
+                    title: "The Cold Part"
+                },{
+                    type: "Song",
+                    title: "Alone Down There"
+                },{
+                    type: "Song",
+                    title: "The Stars Are Projectors"
+                },{
+                    type: "Song",
+                    title: "Wild Packs of Family Dogs"
+                },{
+                    type: "Song",
+                    title: "I Came as a Rat"
+                },{
+                    type: "Song",
+                    title: "Lives"
+                },{
+                    type: "Song",
+                    title: "Life Like Weeds"
+                },{
+                    type: "Song",
+                    title: "What People Are Made Of"
+                },
+            ],
+            //  [ next album
+            //      { 
+            //           type: "Song",
+            //           title: ""
+            //      },
+            //  ],
+        ],
+        [//next artist MBV
+            [//album 1 - Loveless
+                { 
+                    type: "Song",
+                    title: "Only Shallow"
+                },{
+                    type: "Song",
+                    title: "Loomer"
+                },{
+                    type: "Song",
+                    title: "Touched (instrumental)"
+                },{
+                    type: "Song",
+                    title: "To Here Knows When"
+                },{
+                    type: "Song",
+                    title: "When You Sleep"
+                },{
+                    type: "Song",
+                    title: "I Only Said"
+                },{
+                    type: "Song",
+                    title: "Come in Alone"
+                },{
+                    type: "Song",
+                    title: "Sometimes"
+                },{
+                    type: "Song",
+                    title: "Blown a Wish"
+                },{
+                    type: "Song",
+                    title: "What you Want"
+                },{
+                    type: "Song",
+                    title: "Soon"
+                }
+            ],
+        //  [ next album
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        ],
+        [//next artist - Cocteau Twins
+            [//album 1 - Heaven or Las Vegas
+                { 
+                    type: "Song",
+                    title: "Cherry-Coloured Funk"
+                },{ 
+                    type: "Song",
+                    title: "Pitch the Baby"
+                },{ 
+                    type: "Song",
+                    title: "Iceblink Luck"
+                },{ 
+                    type: "Song",
+                    title: "Fifty-Fifty Clown"
+                },{ 
+                    type: "Song",
+                    title: "Heaven or Las Vegas"
+                },{ 
+                    type: "Song",
+                    title: "I Wear Your RIng"
+                },{ 
+                    type: "Song",
+                    title: "Fotzepolitic"
+                },{ 
+                    type: "Song",
+                    title: "Wolf in the Breast"
+                },{ 
+                    type: "Song",
+                    title: "Road, River and Rail"
+                },{ 
+                    type: "Song",
+                    title: "Frou-Frou Foxes in Midsumer Fires"
+                },
+            ],
+        //  [ next album
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        ],
+        [//next artist - Aphex Twin
+            [//album 1
+                { 
+                    type: "Song",
+                    title: "Jynweythek"
+                },{ 
+                    type: "Song",
+                    title: "Vordhosbn"
+                },{ 
+                    type: "Song",
+                    title: "Kladfvgbung Micshk"
+                },{ 
+                    type: "Song",
+                    title: "Omgyjya-Switch7"
+                },{ 
+                    type: "Song",
+                    title: "Strotha Tynhe"
+                },{ 
+                    type: "Song",
+                    title: "Gwely Mernans"
+                },{ 
+                    type: "Song",
+                    title: "Bbydhyonchord"
+                },{ 
+                    type: "Song",
+                    title: "Cock/Ver10"
+                },{ 
+                    type: "Song",
+                    title: "Avril 14th"
+                },{ 
+                    type: "Song",
+                    title: "Mt Saint Michel + Saint Michaels Mount"
+                },{ 
+                    type: "Song",
+                    title: "Gwarek2"
+                },{ 
+                    type: "Song",
+                    title: "Orban Eq Trx 4",
+                },{ 
+                    type: "Song",
+                    title: "Aussois",
+                },{ 
+                    type: "Song",
+                    title: "Hy a Scullyas Lyf Adhagrow",
+                },{ 
+                    type: "Song",
+                    title: "Kesson Dalek",
+                },
+            ],
+        //  [ next album
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        ],
+        [//next artist Sufjan Steven
+            [//album 1
+                { 
+                    type: "Song",
+                    title: "Futile Devices"
+                },{ 
+                    type: "Song",
+                    title: "Too Much"
+                },{ 
+                    type: "Song",
+                    title: "Age of Adz"
+                },{ 
+                    type: "Song",
+                    title: "I Walked"
+                },{ 
+                    type: "Song",
+                    title: "Now That I'm Older"
+                },{ 
+                    type: "Song",
+                    title: "Get Real Get Right"
+                },{ 
+                    type: "Song",
+                    title: "Bad Communication"
+                },{ 
+                    type: "Song",
+                    title: "Vesuvius"
+                },{ 
+                    type: "Song",
+                    title: "All for Myself"
+                },{ 
+                    type: "Song",
+                    title: "I Want to Be Well"
+                },{ 
+                    type: "Song",
+                    title: "Impossible Soul"
+                },
+            ],
+        //  [//next album
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        ],
+        //[next artist catalogue 
+        //  [album 1
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        //  [ next album
+        //      { 
+        //           type: "Song",
+        //           title: ""
+        //      },
+        //  ],
+        //],
         //end of songs
     ]  
 ]
@@ -261,7 +554,7 @@ async function playGod (collection) {
         artist = await createArtist(collection[0][x]); 
         for (j = 0; j < collection[1][x].length; j++) {
             let album = await createAlbum(collection[1][x][j], artist._id)
-            collection[2][x][j].audio = "dfsafd"
+            //collection[2][x][j].audio = "dfsafd"
             let songs = await createSongs(collection[2][x][j], artist._id, album._id)
             await updateArtist (artist, album, songs)
             await updateAlbum (album, songs)

@@ -1,3 +1,20 @@
+//give each artist more artist info 
+//give each artist one album with cover photo
+//fill out track list of those albums
+
+// Cocteau Twins - Heaven or Las Vegas
+// Aphex Twin - druQks 
+// Sufjan Stevens - Age of Adz
+
+
+
+
+
+
+
+
+
+
 
 
 //
