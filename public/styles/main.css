@@ -141,7 +141,55 @@ img.album-art {
     padding-left: 15px;
     text-decoration: none;
     color:rgb(0, 0, 0);
+}
 
+.artist-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+
+    width: 100%;
+    height: 330px;
+    left: 0px;
+    overflow-x: scroll;
+}
+
+.artist-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.artist-photo-frame {
+    box-sizing: border-box;
+
+    width: 275px;
+    height: 275px;
+
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border: 2px solid #000000;
+    box-shadow: 8px 7px 0px #000000;
+    border-radius: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-photo {
+    height: 100%;
+    justify-content: center;
+    clip-path: circle(34.85%);
+}
+
+.artist-name {
+    font-family: "Mattone";
+    font-size: 1em;
+    padding-left: 15px;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
 }
 
 .xl-graphic-title {
