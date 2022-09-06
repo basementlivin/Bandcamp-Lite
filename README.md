@@ -1,6 +1,6 @@
 # Bandcamp Lite
 Designed and developed by Corey Neal and Erik Pedersen during a one-week sprint in late summer 2022.
-#### FILE UNDER: MEN stack, full CRUD, web apps, paired programming, sprint, sweating
+#### FILE UNDER: MEN stack, full CRUD, web apps, paired programming, sprint, music, sweating
 #### TECH STACK & TOOLS: HTML, CSS, JavaScript, Express, Node.js, Formidable.js, MongoDB, Mongoose, Figma
 
 ## USER STORY
