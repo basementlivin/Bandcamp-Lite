@@ -5,12 +5,12 @@
     <%- include('../partials/nav') %>
     <h1>EDIT PAGE</h1>
     <div>
-        <form action="/test/<%= album._id %>?_method=PUT" method="POST">
+        <form action="/test/<%= context._id %>?_method=PUT" method="POST">
             <div>
                 <label for="title">Album Name</label>
                     <input
                     type="text"
-                    value="<%= album.title %>"
+                    value="<%= context.title %>"
                     name="title"
                     id="title"
                 />
@@ -19,7 +19,7 @@
         </form>
     </div>
     <div>
-        <form action="/test/<%= album._id %>?_method=DELETE" method="POST">
+        <form action="/test/<%= context._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Item">
         </form>
     </div>

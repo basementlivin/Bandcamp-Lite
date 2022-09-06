@@ -25,8 +25,8 @@ router.get('/upload', (req, res) => {
 
 router.get('/album/:ext/edit', async (req, res) => {
     try {
-        let foundAlbum = await Album.find({title: req.params.ext})
-        context = {album: foundAlbum[0]}
+        let foundAlbum = await Album.findById(req.params.ext)
+        context = foundAlbum
         console.log (context)
         
         res.render('edit.ejs', context)
