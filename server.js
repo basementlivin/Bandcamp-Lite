@@ -8,7 +8,7 @@ require('./config/db.connection')
 // CONTROLLER IMPORTS
 const bandcampController = require('./controllers/bandcamp_controller.js');
 const { Artist, Album } = require('./models/models');
-//const searchController = require('./controllers/search_controller.js')
+//const searchController = require('./controllers/search_controller.js') //Return here for searchbar functionality
 
 // App Config
 const app = express();
