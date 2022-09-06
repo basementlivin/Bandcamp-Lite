@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//Models
 const artistSchema = new Schema ({
     type: {type: String, required: true, default: "Artist"},
     name: {type: String, required: true},
@@ -32,13 +33,13 @@ const songSchema = new Schema ({
     type: {type: String, required: true, default: 'Song'},
     title: {type: String, required: true},
     audio: {type: String, default: null}, //base64 encoded audio string.
-    //audiosrcname: {type: String, default: null} //stores original filename and ext of source audio file.
+    //audiosrcname: {type: String, default: null} //stores original filename and ext of source audio file. Backup
     artist: {type: mongoose.Types.ObjectId, ref: 'Artist', default: null}, //* default to artist of page
     album: {type: String, default: null}, //*  may need different default
     genre: [{type: String, default: null}],
 })
 
-
+//Exports
 const Artist = mongoose.model("Artist", artistSchema)
 const Album = mongoose.model("Album", albumSchema)
 const Song = mongoose.model("Song", songSchema)
