@@ -69,7 +69,7 @@ router.get('/song/:ext', async (req, res) => {
     }
 })
 
-// Create route - *
+// Create route(s) - *
 
 router.post('/', async (req, res) => {
     try {

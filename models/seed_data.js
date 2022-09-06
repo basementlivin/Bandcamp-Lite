@@ -28,27 +28,33 @@ const collection = [
         },
         { //next artist
             type: "Artist",
-            name: "Bjork"
+            name: "Bjork",
+            profilePicture: "https://media.pitchfork.com/photos/630f609e8b8ceadf32208b34/2:1/w_2560%2Cc_limit/Bjork.jpg"
         },
         { //next artist
             type: "Artist",
-            name: "Modest Mouse"
+            name: "Modest Mouse",
+            profilePicture: "https://d.newsweek.com/en/full/312779/modestmouseforcms.jpg"
         },
         { //next artist
             type: "Artist",
-            name: "My Bloody Valentine"
+            name: "My Bloody Valentine",
+            profilePicture: "https://img.jakpost.net/c/2021/05/18/2021_05_18_113335_1621318332._large.jpg"
         },
         { //next artist
             type: "Artist",
-            name: "Cocteau Twins"
+            name: "Cocteau Twins",
+            profilePicture: "https://media.ntslive.co.uk/crop/770x770/5c97914f-e291-4596-8929-8e617d1682b4_1579824000.png"
         },
         { //next artist
             type: "Artist",
-            name: "Aphex Twin"
+            name: "Aphex Twin",
+            profilePicture: "https://upload.wikimedia.org/wikipedia/en/3/3f/Richard_d_james_album_cover.jpg"
         },
         { //next artist
             type: "Artist",
-            name: "Sufjan Stevens"
+            name: "Sufjan Stevens",
+            profilePicture: "https://upload.wikimedia.org/wikipedia/commons/3/33/Sufjan_Stevens_performing_at_Pitchfork%2C_2016.jpg"
         },
         // { //next artist
         //     type: "Artist",

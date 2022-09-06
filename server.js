@@ -12,7 +12,7 @@ const { Artist, Album } = require('./models/models');
 
 // App Config
 const app = express();
-const PORT = 4001;
+const PORT = 4000;
 app.set('view engine', 'ejs');
 
 // MIDDLEWARE
