@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+    <h1>Albums</h1>
+    <div>
+        <ul>
+            <% for (i=0; i < albums.length; i++) { %>
+                <li> <a href="./album/<%= albums[i]._id %>"><%= albums[i].title %></a></li>
+            <% } %>
+        </ul>
+    </div>
+    <%- include('../partials/foot_main') %>
+</body>
+
+</html>

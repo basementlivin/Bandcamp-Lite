@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+    <img class="hero-image" src="https://f4.bcbits.com/img/0029632904_0">
+        <div class="xl-graphic-title">
+            <h1 class="page-title">UPLOAD</h1>
+        </div>
+        <main class="flex-column-container">
+            <div class="upload-form-field">
+                <form class="form-daddy" action="/test" method="POST" enctype="multipart/form-data">
+                <div class="upload-form-field">
+                    <label for="artistname">Artist Name</label>
+                        
+                        <input class="user-input-field"
+                        type="text"
+                        placeholder="The Budos Band"
+                        name="artistname"
+                        id="artistname"
+                    />
+                </div>
+                <div class="upload-form-field">
+                    <label for="albumtitle">Album Title</label>
+                        <input class="user-input-field"
+                        type="text"
+                        placeholder="The Budos Band II"
+                        name="albumtitle"
+                        id="albumtitle" 
+                        />
+                </div>
+                <div class="upload-form-field" id="another-track-form-field">
+                    <label for="tracktitle">Track Name</label>
+                        <input class="user-input-field"
+                        type="text"
+                        placeholder="Ride Or Die"
+                        name="tracktitle"
+                        id="tracktitle" 
+                        />
+                    <label for="audiofile">Audio File</label>
+                        <input class="file-upload-button"
+                        type="file"
+                        accept="audio/*"
+                        name="audiofile"
+                        id="audiofile" 
+                        />
+                </div>
+                <div class="add-another-track">
+                    <p class="upload-form-field" id="another-new-track">➕ add another track</p>
+                </div>
+                <div class="submit-button">
+                    <button id="submit-button" class="button is-info">SUBMIT</button>
+                </div>
+                </form>
+            </div>
+        </main>
+        <%- include('../partials/foot_main') %>
+    </body>
+</html>

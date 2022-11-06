@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+    <h1>Artists</h1>
+    <div>
+        <ul>
+            <% for (i=0; i < artists.length; i++) { %>
+                <li> <a href="./artistprofile/<%= artists[i]._id %>"><%= artists[i].name %></a> </li>
+            <% } %>
+        </ul>
+    </div>
+    <%- include('../partials/foot_main') %>
+</body>
+</html>

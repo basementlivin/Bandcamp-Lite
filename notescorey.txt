@@ -1,0 +1,17 @@
+to do:
+
+Link up CRUD routes so they interact with the database
+
+Create reference audio files -> Set up playback functions
+    can be achieved by Song.find() and setting the audio property to an
+    audio file hosted somehwere else. We can then have the Show routes
+    play that audio back on the front end until we can figure out how to upload 
+    directly through the upload form to the database.
+
+    Stretch: actually implement file uploading on the site/database
+
+
+Set up User Auth models and login routes so that the upload access will
+    pertain only to the artist page ssociated with the current User. 
+
+

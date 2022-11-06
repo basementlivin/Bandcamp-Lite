@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+    <h1>Songs, A-Z</h1>
+    <div>
+        <ul>
+            <% for (i=0; i < songs.length; i++) { %>
+                <li><a href="/test/song/<%=songs[i]._id%>"><%= songs[i].title %></a></li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+    
+</html>

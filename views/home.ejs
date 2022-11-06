@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <%- include('../partials/nav') %>
+
+
+    <img class="hero-image" src="https://media.npr.org/assets/img/2017/09/23/gettyimages-815825648_wide-73da66a740c3ddbee9768dcaac9433f6fafa20c6.jpg" alt="Charles Bradley performing on stage in a rust-colored jumpsuit">
+
+    <div class="home-cluster">
+        <h1 class="section-title">Albums</h1>     
+        <div class="album-card-wrapper">
+            <% for (i=0; i < context[1].length; i++) { %>
+                <div class="album-card">
+                    <div class="album-art-frame">
+                        <img src="<%=context[1][i].albumart%>" class="album-art">
+                    </div>
+                <a class="album-title" href="./test/album/<%= context[1][i]._id %>"> <%= context[1][i].title %></a></div>
+            <% } %>
+        </div>    
+    </div>
+    <div class="home-cluster">
+        <h1 class="section-title">Artists</h1>
+        <div class="artist-card-wrapper">
+            <% for (i=0; i < context[0].length; i++) { %>
+                <div class="artist-card">
+                    <div class="artist-photo-frame">
+                        <img src="<%=context[0][i].profilePicture%>" class="artist-photo">
+                    </div>
+                
+            <a class="artist-name" href="./test/artistprofile/<%= context[0][i]._id %>"> <%= context[0][i].name %></a></div>
+        <% } %>
+        </div>
+    </div>
+    
+    <%- include('../partials/foot_main') %>
+</body>
+</html>
