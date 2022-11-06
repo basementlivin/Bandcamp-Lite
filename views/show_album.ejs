@@ -7,13 +7,13 @@
     <div>
         <h2><%= context.title%></h2>
         <ol>
-        <% context.tracks.forEach((track) => { %>
+        <% context.tracks.forEach((track) => { %>    
             <li>
                 <audio controls>
                     <source src="data:audio/mpeg;base64,<%=track.audio%>"/>
                     <!-- src typically accepts a dataURL as its source and the current version of the site is not sending data that way, so I handwrote the first part of the dataURL formatting and injected the base64 encoded audio string with injector tags -->
                 </audio>
-            <a href="/test/song/<%= track._id %>"> <%= track.title %> <a>
+            <a href="/test/song/<%= track._id %>"><%= track.title %> <a>
             </li>
         <% }) %>
         </ol>

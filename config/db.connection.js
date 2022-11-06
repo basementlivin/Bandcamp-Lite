@@ -10,6 +10,8 @@ require('dotenv').config();
 // get the MongoDB URL from .env file
 const connectionStr = process.env.MONGODB_URI;
 
+console.log(`connectionStr= ${connectionStr}`)
+
 mongoose.connect( process.env.MONGODB_URI || `http:/localhost:${process.env.PORT}`);
 
 
